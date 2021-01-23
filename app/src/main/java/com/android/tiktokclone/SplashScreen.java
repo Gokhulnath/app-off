@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
@@ -20,11 +21,17 @@ public class SplashScreen extends AppCompatActivity {
 
         logoIV = findViewById(R.id.logoIV);
         YoYo.with(Techniques.Shake)
-                .duration(500)
+                .duration(900)
                 .repeat(3)
                 .playOn(findViewById(R.id.logoIV));
 
-        Intent onBoarding = new Intent(SplashScreen.this, OnBoardingActivity.class);
-        startActivity(onBoarding);
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent onBoarding = new Intent(SplashScreen.this, OnBoardingActivity.class);
+                startActivity(onBoarding);
+            }
+        }, 2000);
     }
 }

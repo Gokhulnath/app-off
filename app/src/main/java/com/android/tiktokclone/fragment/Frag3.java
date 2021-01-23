@@ -28,10 +28,10 @@ public class Frag3 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.frag1,container,false);
          iv_image=view.findViewById(R.id.frag1IV);
-        iv_image.setImageResource(R.drawable.ic_tiktok_logo);
+        iv_image.setImageResource(R.drawable.ic_influencer);
 
         TextView tv_text=view.findViewById(R.id.Frag1TV);
-        tv_text.setText("TikTok");
+        tv_text.setText("For Influencer");
 
 
         return view;
