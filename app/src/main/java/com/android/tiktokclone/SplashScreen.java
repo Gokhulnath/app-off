@@ -8,6 +8,8 @@ import android.os.Handler;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import com.android.tiktokclone.utils.Constants;
+import com.android.tiktokclone.utils.SharedPref;
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 
@@ -29,8 +31,18 @@ public class SplashScreen extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent onBoarding = new Intent(SplashScreen.this, OnBoardingActivity.class);
-                startActivity(onBoarding);
+
+                int loginStatus = SharedPref.getInt(getApplicationContext(), Constants.loginStatus);
+                if (loginStatus == 1) {
+                    Intent main = new Intent(SplashScreen.this, MainActivity.class);
+                    startActivity(main);
+                    finish();
+                } else {
+                    Intent onBoarding = new Intent(SplashScreen.this, OnBoardingActivity.class);
+                    startActivity(onBoarding);
+                }
+
+
             }
         }, 2000);
     }
