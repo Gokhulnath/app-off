@@ -6,11 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".ui.Add.AddFragment">
 
-    <TextView
-        android:id="@+id/text_add"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reelsRV"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textSize="20sp"
-        android:text="hello"
-        android:gravity="center" />
+        android:layout_height="match_parent" />
+
 </RelativeLayout>
