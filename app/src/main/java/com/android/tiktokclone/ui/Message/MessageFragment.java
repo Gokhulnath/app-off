@@ -1,4 +1,4 @@
-package com.android.tiktokclone.ui.notifications;
+package com.android.tiktokclone.ui.Message;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,17 +14,17 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.android.tiktokclone.R;
 
-public class NotificationsFragment extends Fragment {
+public class MessageFragment extends Fragment {
 
-    private NotificationsViewModel notificationsViewModel;
+    private MessageViewModel messageViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        notificationsViewModel =
-                new ViewModelProvider(this).get(NotificationsViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_notifications, container, false);
-        final TextView textView = root.findViewById(R.id.text_notifications);
-        notificationsViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+        messageViewModel =
+                new ViewModelProvider(this).get(MessageViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_message, container, false);
+        final TextView textView = root.findViewById(R.id.text_message);
+        messageViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);

@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".ui.Trending.TrendingFragment"
+    tools:ignore="MissingDefaultResource">
 
     <TextView
-        android:id="@+id/text_home"
+        android:id="@+id/text_trending"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:textSize="20sp"

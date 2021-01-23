@@ -1,16 +1,16 @@
-package com.android.tiktokclone.ui.home;
+package com.android.tiktokclone.ui.Add;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class HomeViewModel extends ViewModel {
+public class AddViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
 
-    public HomeViewModel() {
+    public AddViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is Home");
+        mText.setValue("This is Add");
     }
 
     public LiveData<String> getText() {
